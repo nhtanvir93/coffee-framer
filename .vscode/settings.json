@@ -1,5 +1,8 @@
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "eslint.validate": ["typescript", "typescriptreact", "javascript", "javascriptreact", "css"]
+  "eslint.validate": ["typescript", "typescriptreact", "javascript", "javascriptreact", "css"],
+  "tailwindCSS.experimental.classRegex": [
+    ["className=\"([^\"]*)\"", "([^\"]*)"]
+  ]
 }
