@@ -2,15 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family:
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer utilities {
+  .img-shadow {
+    filter: drop-shadow(40px 50px 25px #0f1115);
+  }
+
+  .img-shadow-sm {
+    filter: drop-shadow(10px 30px 15px #303030);
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+
+/* Chrome / Edge / Safari */
+::-webkit-scrollbar {
+  width: 4px; /* go lower than 6px */
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(136 136 136 / 60%);
 }

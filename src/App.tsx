@@ -1,9 +1,10 @@
 import './App.css';
+import Hero from './components/Hero/Hero';
 
 function App() {
   return (
-    <div>
-      <p>App</p>
+    <div className="overflow-x-hidden">
+      <Hero />
     </div>
   );
 }
