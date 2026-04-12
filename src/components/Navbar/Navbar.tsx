@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import React, { useState } from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { useState } from 'react';
+import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoClose } from 'react-icons/io5';
 

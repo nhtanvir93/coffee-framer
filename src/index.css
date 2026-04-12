@@ -16,6 +16,14 @@
   .img-shadow-sm {
     filter: drop-shadow(10px 30px 15px #303030);
   }
+
+  .input-style {
+    @apply rounded-md border-[1px] border-gray-400 px-4 py-2 focus:border-primary focus:outline-none;
+  }
+
+  .primary-btn {
+    @apply rounded-md bg-primary px-4 py-2 text-white hover:bg-primaryDark;
+  }
 }
 
 /* Firefox */

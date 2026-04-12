@@ -2,6 +2,7 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
+    "source.formatDocument": "explicit",
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "explicit",
     "source.removeUnusedImports": "explicit"
@@ -12,7 +13,13 @@
     "typescript",
     "typescriptreact"
   ],
-  "eslint.format.enable": true,
+  "eslint.format.enable": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "tailwindCSS.experimental.classRegex": [
     ["className=\"([^\"]*)\"", "([^\"]*)"]
   ]

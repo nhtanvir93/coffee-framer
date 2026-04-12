@@ -1,5 +1,4 @@
 import { motion, Variants } from 'framer-motion';
-import React from 'react';
 
 import Coffee1 from '../../assets/coffee/coffee1.png';
 import Coffee3 from '../../assets/coffee/coffee3.png';
