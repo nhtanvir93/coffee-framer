@@ -1,4 +1,6 @@
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { useState } from 'react';
 
 import CoffeeMainImg from '../../assets/black.png';
 import Navbar from '../Navbar/Navbar';
@@ -6,12 +8,19 @@ import Navbar from '../Navbar/Navbar';
 import styles from './Hero.module.css';
 
 const Hero = () => {
+  const [showSidebar, setShowSidebar] = useState(false);
+
   return (
-    <section className={[styles.bgImage, 'min-h-[750px] w-full'].join(' ')}>
+    <section
+      className={[
+        styles.bgImage,
+        'min-h-[750px] w-full overflow-x-hidden',
+      ].join(' ')}
+    >
       <div className="container">
-        <Navbar />
+        <Navbar setShowSidebar={setShowSidebar} />
         {/* Hero Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center min-h-[850px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center min-h-[850px] overflow-x-hidden">
           {/* Text content section */}
           <div className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28">
             <motion.h1
@@ -156,7 +165,38 @@ const Hero = () => {
               <div className="absolute -top-6 -right-10 w-[250px] h-[200px] bg-darkGray/50"></div>
             </div>
           </motion.div>
-          <div></div>
+          {/* Sidebar menu section */}
+          <AnimatePresence>
+            {showSidebar && (
+              <motion.div
+                initial={{ x: '100%' }}
+                animate={{ x: 0 }}
+                exit={{ x: '100%' }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 100,
+                  damping: 10,
+                }}
+                className="absolute top-0 right-0 w-[140px] h-full bg-gradient-to-b from-primary/80 to-primaryDark/80 backdrop-blur-sm z-10"
+              >
+                <div className="w-full h-full flex flex-col justify-center items-center">
+                  <div className="flex flex-col justify-center items-center gap-6">
+                    <div className="w-[1px] h-[70px] bg-white"></div>
+                    <div className="p-2 rounded-full border border-white cursor-pointer">
+                      <FaFacebookF className="text-2xl text-white" />
+                    </div>
+                    <div className="p-2 rounded-full border border-white cursor-pointer">
+                      <FaTwitter className="text-2xl text-white" />
+                    </div>
+                    <div className="p-2 rounded-full border border-white cursor-pointer">
+                      <FaInstagram className="text-2xl text-white" />
+                    </div>
+                    <div className="w-[1px] h-[70px] bg-white"></div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </section>
