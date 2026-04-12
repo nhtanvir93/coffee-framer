@@ -11,9 +11,9 @@ const Hero = () => {
       <div className="container">
         <Navbar />
         {/* Hero Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center min-h-[850px] overflow-x-hidden">
+        <div className="grid min-h-[850px] grid-cols-1 place-items-center overflow-x-hidden md:grid-cols-2 lg:grid-cols-3">
           {/* Text content section */}
-          <div className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28">
+          <div className="mt-[100px] space-y-28 p-4 text-lightOrange md:mt-0">
             <motion.h1
               initial={{
                 opacity: 0,
@@ -29,7 +29,7 @@ const Hero = () => {
                 stiffness: 100,
                 damping: 10,
               }}
-              className="text-7xl font-bold leading-tight ml-14"
+              className="ml-14 text-7xl font-bold leading-tight"
             >
               Blvck Tumbler
             </motion.h1>
@@ -52,14 +52,13 @@ const Hero = () => {
             >
               <div className="relative z-10 space-y-4">
                 <h2 className="text-2xl">Black Lifestyle Lovers,</h2>
-                <h2 className="text-sm opacity-40 leading-loose">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Debitis nulla earum quia veritatis aut. Odio nesciunt hic
-                  fugit fugiat, vero excepturi dolorum quia incidunt molestiae
-                  nobis molestias consequuntur nam fuga.
+                <h2 className="text-sm leading-loose opacity-40">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis nulla earum quia
+                  veritatis aut. Odio nesciunt hic fugit fugiat, vero excepturi dolorum quia
+                  incidunt molestiae nobis molestias consequuntur nam fuga.
                 </h2>
               </div>
-              <div className="absolute -top-6 -left-10 w-[250px] h-[200px] bg-gray-700/25"></div>
+              <div className="absolute -left-10 -top-6 h-[200px] w-[250px] bg-gray-700/25"></div>
             </motion.div>
           </div>
           {/* Hero image section */}
@@ -81,7 +80,7 @@ const Hero = () => {
               }}
               src={CoffeeMainImg}
               alt=""
-              className="relative z-40 h-[400px] md:h-[700px] img-shadow"
+              className="img-shadow relative z-40 h-[400px] md:h-[700px]"
             />
             {/* Orange ring */}
             <motion.div
@@ -99,7 +98,7 @@ const Hero = () => {
                 stiffness: 100,
                 damping: 10,
               }}
-              className="h-[180px] w-[180px] absolute top-24 -right-16 border-[20px] border-primary rounded-full z-10"
+              className="absolute -right-16 top-24 z-10 h-[180px] w-[180px] rounded-full border-[20px] border-primary"
             ></motion.div>
             {/* Shadow Brand Name */}
             <motion.div
@@ -117,9 +116,9 @@ const Hero = () => {
                 stiffness: 100,
                 damping: 10,
               }}
-              className="absolute top-10 left-[350px]"
+              className="absolute left-[350px] top-10"
             >
-              <h2 className="text-[100px] text-darkGray/40 leading-none font-bold scale-150 z-[1]">
+              <h2 className="z-[1] scale-150 text-[100px] font-bold leading-none text-darkGray/40">
                 Blvck Tumbler
               </h2>
             </motion.div>
@@ -140,20 +139,18 @@ const Hero = () => {
               stiffness: 100,
               damping: 10,
             }}
-            className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28"
+            className="mt-[100px] space-y-28 p-4 text-lightOrange md:mt-0"
           >
-            <h1 className="opacity-0 text-7xl font-bold leading-tight ml-14">
-              Blvck Tumbler
-            </h1>
+            <h1 className="ml-14 text-7xl font-bold leading-tight opacity-0">Blvck Tumbler</h1>
             <div className="relative">
               <div className="relative z-10 space-y-4">
                 <h2 className="text-2xl">Black Thumbler</h2>
-                <h2 className="text-sm opacity-40 leading-loose">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Neque, ipsum quaerat vel minima maxime eius.
+                <h2 className="text-sm leading-loose opacity-40">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, ipsum quaerat vel
+                  minima maxime eius.
                 </h2>
               </div>
-              <div className="absolute -top-6 -right-10 w-[250px] h-[200px] bg-darkGray/50"></div>
+              <div className="absolute -right-10 -top-6 h-[200px] w-[250px] bg-darkGray/50"></div>
             </div>
           </motion.div>
         </div>

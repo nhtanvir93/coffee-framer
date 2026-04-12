@@ -1,5 +1,5 @@
-import React from 'react';
 import { motion, Variants } from 'framer-motion';
+import React from 'react';
 
 import Coffee1 from '../../assets/coffee/coffee1.png';
 import Coffee3 from '../../assets/coffee/coffee3.png';
@@ -58,7 +58,7 @@ const containerVariants: Variants = {
 const Services = () => {
   return (
     <div className="container my-16 space-y-4">
-      <div className="max-w-lg mx-auto text-center space-y-2">
+      <div className="mx-auto max-w-lg space-y-2 text-center">
         <motion.h1
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -83,9 +83,8 @@ const Services = () => {
           }}
           className="text-sm opacity-50"
         >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, et
-          eaque? Laboriosam cumque asperiores doloremque temporibus, labore
-          incidunt quis dignissimos.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, et eaque? Laboriosam
+          cumque asperiores doloremque temporibus, labore incidunt quis dignissimos.
         </motion.p>
       </div>
       <motion.div
@@ -93,23 +92,21 @@ const Services = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.8 }}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+        className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3"
       >
         {serviceData.map((service) => (
           <motion.div
             variants={cardVariants}
             key={`service-${service.id}`}
-            className="text-center p-4 space-y-6"
+            className="space-y-6 p-4 text-center"
           >
             <img
-              className="image-shadow2 max-w-[200px] mx-auto hover:scale-110 duration-300 cursor-pointer"
+              className="image-shadow2 mx-auto max-w-[200px] cursor-pointer duration-300 hover:scale-110"
               src={service.image}
               alt=""
             />
             <div className="space-y-2">
-              <h2 className="text-2xl font-bold text-primary">
-                {service.title}
-              </h2>
+              <h2 className="text-2xl font-bold text-primary">{service.title}</h2>
               <p className="text-darkGray">{service.subtitle}</p>
             </div>
           </motion.div>

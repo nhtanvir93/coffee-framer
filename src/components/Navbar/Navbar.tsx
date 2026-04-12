@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
 import { AnimatePresence, motion } from 'framer-motion';
-import { IoClose } from 'react-icons/io5';
+import React, { useState } from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoClose } from 'react-icons/io5';
 
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
 
   return (
-    <nav className="absolute top-0 left-0 w-full pt-10 text-white z-20">
+    <nav className="absolute left-0 top-0 z-20 w-full pt-10 text-white">
       <div className="container">
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           {/* Logo section */}
           <motion.h1
             initial={{
@@ -27,7 +27,7 @@ const Navbar = () => {
               stiffness: 100,
               damping: 10,
             }}
-            className="uppercase font-semibold text-2xl"
+            className="text-2xl font-semibold uppercase"
           >
             <span className="text-lightOrange">Coders</span> Cafe
           </motion.h1>
@@ -51,9 +51,9 @@ const Navbar = () => {
             className="z-20"
           >
             {showSidebar ? (
-              <IoClose className="text-4xl cursor-pointer" />
+              <IoClose className="cursor-pointer text-4xl" />
             ) : (
-              <GiHamburgerMenu className="text-3xl cursor-pointer" />
+              <GiHamburgerMenu className="cursor-pointer text-3xl" />
             )}
           </motion.div>
         </div>
@@ -69,21 +69,21 @@ const Navbar = () => {
               stiffness: 100,
               damping: 10,
             }}
-            className="absolute top-0 right-0 w-[140px] h-screen bg-gradient-to-b from-primary/80 to-primaryDark/80 backdrop-blur-sm z-10"
+            className="absolute right-0 top-0 z-10 h-screen w-[140px] bg-gradient-to-b from-primary/80 to-primaryDark/80 backdrop-blur-sm"
           >
-            <div className="w-full h-full flex flex-col justify-center items-center">
-              <div className="flex flex-col justify-center items-center gap-6">
-                <div className="w-[1px] h-[70px] bg-white"></div>
-                <div className="p-2 rounded-full border border-white cursor-pointer">
+            <div className="flex h-full w-full flex-col items-center justify-center">
+              <div className="flex flex-col items-center justify-center gap-6">
+                <div className="h-[70px] w-[1px] bg-white"></div>
+                <div className="cursor-pointer rounded-full border border-white p-2">
                   <FaFacebookF className="text-2xl text-white" />
                 </div>
-                <div className="p-2 rounded-full border border-white cursor-pointer">
+                <div className="cursor-pointer rounded-full border border-white p-2">
                   <FaTwitter className="text-2xl text-white" />
                 </div>
-                <div className="p-2 rounded-full border border-white cursor-pointer">
+                <div className="cursor-pointer rounded-full border border-white p-2">
                   <FaInstagram className="text-2xl text-white" />
                 </div>
-                <div className="w-[1px] h-[70px] bg-white"></div>
+                <div className="h-[70px] w-[1px] bg-white"></div>
               </div>
             </div>
           </motion.div>

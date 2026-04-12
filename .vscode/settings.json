@@ -2,16 +2,17 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
-    // Fix all fixable issues, including ESLint + Prettier
-    "source.fixAll.eslint": "always"
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit",
+    "source.removeUnusedImports": "explicit"
   },
   "eslint.validate": [
-    "typescript",
-    "typescriptreact",
     "javascript",
     "javascriptreact",
-    "css"
+    "typescript",
+    "typescriptreact"
   ],
+  "eslint.format.enable": true,
   "tailwindCSS.experimental.classRegex": [
     ["className=\"([^\"]*)\"", "([^\"]*)"]
   ]
