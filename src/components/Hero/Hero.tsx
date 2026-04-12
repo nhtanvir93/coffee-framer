@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import CoffeeMainImg from '../../assets/black.png';
 import Navbar from '../Navbar/Navbar';
 
@@ -12,10 +14,42 @@ const Hero = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center min-h-[850px]">
           {/* Text content section */}
           <div className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28">
-            <h1 className="text-7xl font-bold leading-tight ml-14">
+            <motion.h1
+              initial={{
+                opacity: 0,
+                y: -100,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                type: 'spring',
+                delay: 1,
+                stiffness: 100,
+                damping: 10,
+              }}
+              className="text-7xl font-bold leading-tight ml-14"
+            >
               Blvck Tumbler
-            </h1>
-            <div className="relative">
+            </motion.h1>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 100,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                type: 'spring',
+                delay: 1.2,
+                stiffness: 100,
+                damping: 10,
+              }}
+              className="relative"
+            >
               <div className="relative z-10 space-y-4">
                 <h2 className="text-2xl">Black Lifestyle Lovers,</h2>
                 <h2 className="text-sm opacity-40 leading-loose">
@@ -26,26 +60,88 @@ const Hero = () => {
                 </h2>
               </div>
               <div className="absolute -top-6 -left-10 w-[250px] h-[200px] bg-gray-700/25"></div>
-            </div>
+            </motion.div>
           </div>
           {/* Hero image section */}
           <div className="relative">
-            <img
+            <motion.img
+              initial={{
+                opacity: 0,
+                scale: 0,
+              }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+              }}
+              transition={{
+                type: 'spring',
+                delay: 0.4,
+                stiffness: 100,
+                damping: 12,
+              }}
               src={CoffeeMainImg}
               alt=""
               className="relative z-40 h-[400px] md:h-[700px] img-shadow"
             />
             {/* Orange ring */}
-            <div className="h-[180px] w-[180px] absolute top-24 -right-16 border-[20px] border-primary rounded-full z-10"></div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 100,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                type: 'spring',
+                delay: 0.8,
+                stiffness: 100,
+                damping: 10,
+              }}
+              className="h-[180px] w-[180px] absolute top-24 -right-16 border-[20px] border-primary rounded-full z-10"
+            ></motion.div>
             {/* Shadow Brand Name */}
-            <div className="absolute top-10 left-[350px]">
+            <motion.div
+              initial={{
+                opacity: 0,
+                x: -100,
+              }}
+              animate={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{
+                type: 'spring',
+                delay: 0.8,
+                stiffness: 100,
+                damping: 10,
+              }}
+              className="absolute top-10 left-[350px]"
+            >
               <h2 className="text-[100px] text-darkGray/40 leading-none font-bold scale-150 z-[1]">
                 Blvck Tumbler
               </h2>
-            </div>
+            </motion.div>
           </div>
           {/* Third div section */}
-          <div className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 100,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              type: 'spring',
+              delay: 1.2,
+              stiffness: 100,
+              damping: 10,
+            }}
+            className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28"
+          >
             <h1 className="opacity-0 text-7xl font-bold leading-tight ml-14">
               Blvck Tumbler
             </h1>
@@ -59,7 +155,7 @@ const Hero = () => {
               </div>
               <div className="absolute -top-6 -right-10 w-[250px] h-[200px] bg-darkGray/50"></div>
             </div>
-          </div>
+          </motion.div>
           <div></div>
         </div>
       </div>
