@@ -7,12 +7,7 @@ import styles from './Hero.module.css';
 
 const Hero = () => {
   return (
-    <section
-      className={[
-        styles.bgImage,
-        'min-h-[750px] w-full overflow-x-hidden',
-      ].join(' ')}
-    >
+    <section className={[styles.bgImage, 'min-h-[750px] w-full'].join(' ')}>
       <div className="container">
         <Navbar />
         {/* Hero Section */}
