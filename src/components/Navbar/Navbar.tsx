@@ -1,10 +1,13 @@
 import React, { Dispatch, SetStateAction } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { IoClose } from 'react-icons/io5';
 
 const Navbar = ({
+  showSidebar,
   setShowSidebar,
 }: {
+  showSidebar: boolean;
   setShowSidebar: Dispatch<SetStateAction<boolean>>;
 }) => {
   return (
@@ -49,7 +52,11 @@ const Navbar = ({
             }}
             onClick={() => setShowSidebar((prev) => !prev)}
           >
-            <GiHamburgerMenu className="text-3xl cursor-pointer" />
+            {showSidebar ? (
+              <IoClose className="text-4xl cursor-pointer" />
+            ) : (
+              <GiHamburgerMenu className="text-3xl cursor-pointer" />
+            )}
           </motion.div>
         </div>
       </div>
