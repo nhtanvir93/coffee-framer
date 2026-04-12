@@ -40,6 +40,7 @@ module.exports = {
     'prettier/prettier': 'error',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     'react/react-in-jsx-scope': 'off',
+    'css-modules/no-undef-class': 'off',
     'import/order': [
       'error',
       {
