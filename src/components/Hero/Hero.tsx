@@ -1,4 +1,5 @@
 import CoffeeMainImg from '../../assets/black.png';
+import Navbar from '../Navbar/Navbar';
 
 import styles from './Hero.module.css';
 
@@ -6,7 +7,7 @@ const Hero = () => {
   return (
     <section className={[styles.bgImage, 'min-h-[750px] w-full'].join(' ')}>
       <div className="container">
-        {/* Navbar Section */}
+        <Navbar />
         {/* Hero Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center min-h-[850px]">
           {/* Text content section */}
